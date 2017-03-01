@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dagger2Demo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="center_short_normal_toast">中间普通Toast</string>
+    <string name="center_short_custom_toast">中间定制Toast</string>
+    <string name="center_short_custom_toast_with_animation">中间定制Toast加动画</string>
+</resources>

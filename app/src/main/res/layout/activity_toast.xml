@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_toast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.adouble.dagger2demo.module.toastandrsp.ToastAct">
+
+
+    <Button
+        android:id="@+id/btn_csn"
+        android:layout_width="match_parent"
+        android:text="@string/center_short_normal_toast"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_csc"
+        android:layout_width="match_parent"
+        android:text="@string/center_short_custom_toast"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_csca"
+        android:layout_width="match_parent"
+        android:text="@string/center_short_custom_toast_with_animation"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="saveSP"
+        android:onClick="saveSp"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>
