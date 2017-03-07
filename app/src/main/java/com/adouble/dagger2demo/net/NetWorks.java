@@ -118,8 +118,8 @@ public class NetWorks {
         BlogService blogService = mRetrofit.create(BlogService.class);
         Observable<HttpResponse<Article>> blogs = blogService.getBlogs();
 
-        blogs.observeOn(Schedulers.io())
-                .subscribeOn(AndroidSchedulers.mainThread())
+        blogs.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(observer);
 
     }

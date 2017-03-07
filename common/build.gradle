@@ -45,7 +45,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // rxjava2
-    compile 'io.reactivex.rxjava2:rxjava:2.0.4'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.6'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     // rxpermissions
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'

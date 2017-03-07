@@ -55,6 +55,18 @@ public class LoggerUtils {
         }
     }
 
+    public static void e(String tag,Throwable t) {
+        if (DEBUG) {
+            Logger.t(tag).e(t.getMessage());
+        }
+    }
+
+    public static void e(Throwable t) {
+        if (DEBUG) {
+            Logger.e(t.getMessage());
+        }
+    }
+
     public static void d(String s) {
         if (DEBUG) {
             Logger.d(s);
