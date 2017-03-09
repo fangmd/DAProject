@@ -57,4 +57,10 @@ public class MainFrag extends BaseFragment implements MainContract.View {
     public void setPresenter(MainContract.Presenter presenter) {
         mPresenter = presenter;
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPresenter.unsubscribe();
+    }
 }

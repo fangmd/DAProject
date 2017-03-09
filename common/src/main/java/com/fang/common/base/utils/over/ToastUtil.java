@@ -30,7 +30,7 @@ public class ToastUtil {
      */
     public static void showToast(Context context, String text) {
         if (sToast == null) {
-            sToast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
+            sToast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_SHORT);
         } else {
             sToast.setText(text);
         }
@@ -42,7 +42,7 @@ public class ToastUtil {
      */
     public static void showLToast(Context context,String text) {
         if (sLToast == null) {
-            sLToast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+            sLToast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_LONG);
         } else {
             sLToast.setText(text);
         }

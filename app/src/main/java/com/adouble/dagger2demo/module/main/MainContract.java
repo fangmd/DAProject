@@ -16,7 +16,7 @@ public class MainContract {
         void showLoadError();
     }
 
-    public interface Presenter extends BasePresenter{
+    public interface Presenter extends BasePresenter {
 
         void getMessage();
     }
