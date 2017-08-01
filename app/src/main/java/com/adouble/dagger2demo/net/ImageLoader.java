@@ -8,9 +8,6 @@ import android.widget.ImageView;
 import com.adouble.dagger2demo.AppConstants;
 import com.adouble.dagger2demo.R;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
 
 /**
  * Created by double on 2017/1/13.
