@@ -47,6 +47,11 @@ public class ToastAct extends BaseActivity {
         ButterKnife.bind(this);
     }
 
+    @Override
+    protected void initInject() {
+
+    }
+
     @OnClick({R.id.btn_csn, R.id.btn_csc, R.id.btn_csca})
     public void onClick(View view) {
         switch (view.getId()) {

@@ -1,4 +1,4 @@
-package com.nerc.baselibrary.network;
+package com.adouble.dagger2demo.net;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 
 import com.adouble.dagger2demo.R;
-import com.adouble.dagger2demo.net.GlideApp;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions;

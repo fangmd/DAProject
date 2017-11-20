@@ -3,8 +3,8 @@ package com.adouble.dagger2demo;
 import android.location.LocationManager;
 import android.support.multidex.MultiDexApplication;
 
+import com.adouble.dagger2demo.dagger.base.AppModule;
 import com.adouble.dagger2demo.dagger.base.ApplicationComponent;
-import com.adouble.dagger2demo.dagger.base.ApplicationModule;
 import com.adouble.dagger2demo.dagger.base.DaggerApplicationComponent;
 import com.fang.common.base.utils.Utils;
 import com.squareup.leakcanary.LeakCanary;
@@ -43,7 +43,7 @@ public class App extends MultiDexApplication {
         Utils.init(this);
 
         mApplicationComponent = DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(this))
+                .appModule(new AppModule(this))
                 .build();
 
         // leakcanary

@@ -16,10 +16,10 @@ import dagger.Provides;
  * Created by double on 2017/1/5.
  */
 @Module
-public class ApplicationModule {
+public class AppModule {
     private final App mApplication;
 
-    public ApplicationModule(App application) {
+    public AppModule(App application) {
         mApplication = application;
     }
 

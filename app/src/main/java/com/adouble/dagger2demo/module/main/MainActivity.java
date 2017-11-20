@@ -59,7 +59,8 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private void initInject() {
+    @Override
+    protected void initInject() {
         mMainComponent = DaggerMainComponent.builder()
                 .applicationComponent(getAppComponent())
                 .mainPresenterModule(new MainPresenterModule(mFragment))
@@ -82,6 +83,9 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    public void toSimpleActivity(View view) {
+        SimpleActivity.actionStart(this);
+    }
 }
 
 

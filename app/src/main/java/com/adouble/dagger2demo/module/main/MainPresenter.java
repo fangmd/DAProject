@@ -13,6 +13,7 @@ import javax.inject.Inject;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.observers.DisposableObserver;
 
 import static android.content.ContentValues.TAG;
 
@@ -30,7 +31,6 @@ public class MainPresenter implements MainContract.Presenter {
     public MainPresenter(MainContract.View view, NetWorks netWorks) {
         mNetWorks = netWorks;
         mView = view;
-        mView.setPresenter(this);
     }
 
     @Override
@@ -67,7 +67,7 @@ public class MainPresenter implements MainContract.Presenter {
     }
 
     @Override
-    public void subscribe(Disposable disposable) {
+    public void subscribe(DisposableObserver disposable) {
         mCompositeDisposable.add(disposable);
     }
 

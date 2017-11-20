@@ -14,13 +14,11 @@ import dagger.Component;
  */
 
 @Singleton
-@Component(modules = ApplicationModule.class)
+@Component(modules = AppModule.class)
 public interface ApplicationComponent {
 
     // Field injections of any dependencies of the DemoApplication
     void inject(App app);
-
-//    void inject(MainActivity mainActivity);
 
 
     //    // Exported for child-components. 下面的 对象 可以被子 Compoennt 使用

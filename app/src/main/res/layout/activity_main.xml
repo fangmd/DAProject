@@ -32,6 +32,12 @@
         android:onClick="toViewAct"
         android:text="Views"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toSimpleActivity"
+        android:text="Simple"/>
+
 
     <TextView
         android:id="@+id/tv_main"

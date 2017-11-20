@@ -20,13 +20,12 @@ public class MainPresenterModule {
     }
 
     @Provides
-    MainContract.View provideView(){
+    MainContract.View provideView() {
         return mView;
     }
 
-
     @Provides
-    MainContract.Presenter providePresenter(NetWorks netWorks){
+    MainContract.Presenter providePresenter(NetWorks netWorks) {
         return new MainPresenter(mView, netWorks);
     }
 

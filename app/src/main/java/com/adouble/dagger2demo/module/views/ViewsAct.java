@@ -49,6 +49,11 @@ public class ViewsAct extends BaseActivity {
 
     }
 
+    @Override
+    protected void initInject() {
+
+    }
+
     public void stop(View view) {
         mVF.stopFlipping();
     }

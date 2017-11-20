@@ -15,12 +15,8 @@ import butterknife.BindView;
  */
 public class MainFrag extends BaseFragment implements MainContract.View {
 
-
-    private MainContract.Presenter mPresenter;
-
     @BindView(R.id.tv_main_frag)
     TextView mTitle;
-
 
     public static MainFrag newInstance() {
 
@@ -38,8 +34,18 @@ public class MainFrag extends BaseFragment implements MainContract.View {
     }
 
     @Override
-    protected void initEventAndData() {
-        mPresenter.getMessage();
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void inject() {
+
     }
 
     @Override
@@ -54,13 +60,8 @@ public class MainFrag extends BaseFragment implements MainContract.View {
     }
 
     @Override
-    public void setPresenter(MainContract.Presenter presenter) {
-        mPresenter = presenter;
-    }
-
-    @Override
     public void onDestroy() {
         super.onDestroy();
-        mPresenter.unsubscribe();
+
     }
 }

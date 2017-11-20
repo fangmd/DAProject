@@ -17,14 +17,14 @@
 package com.adouble.dagger2demo.base;
 
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
+import io.reactivex.observers.DisposableObserver;
 
 public interface BasePresenter {
 
 
     CompositeDisposable mCompositeDisposable = new CompositeDisposable();
 
-    void subscribe(Disposable disposable);
+    void subscribe(DisposableObserver disposable);
 
     void unsubscribe();
 

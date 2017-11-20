@@ -36,27 +36,12 @@ public abstract class BaseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        if (savedInstanceState == null) {
-            if (!isHidden()) {
-                isInited = true;
-                initEventAndData();
-            }
-        } else {
-            if (!isHidden()) {
-                isInited = true;
-                initEventAndData();
-            }
-        }
+        initView();
+        initData();
+
     }
 
-    @Override
-    public void onHiddenChanged(boolean hidden) {
-        super.onHiddenChanged(hidden);
-        if (!isInited && !hidden) {
-            isInited = true;
-            initEventAndData();
-        }
-    }
+
 
     @Override
     public void onDestroyView() {
@@ -68,5 +53,8 @@ public abstract class BaseFragment extends Fragment {
 
 
     protected abstract int getLayoutId();
-    protected abstract void initEventAndData();
+    protected abstract void initView();
+    protected abstract void initData();
+    protected abstract void inject();
+
 }

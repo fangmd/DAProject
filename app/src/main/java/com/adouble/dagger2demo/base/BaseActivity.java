@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.adouble.dagger2demo.App;
 import com.adouble.dagger2demo.dagger.base.ApplicationComponent;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     public ApplicationComponent getAppComponent(){
         return ((App) getApplication()).component();
@@ -15,5 +15,11 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        initInject();
     }
+
+
+    protected abstract void initInject();
 }

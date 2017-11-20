@@ -48,8 +48,6 @@
 
         <activity android:name=".module.views.ViewsAct">
         </activity>
-
-
     </application>
 
 </manifest>
