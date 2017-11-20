@@ -1,8 +1,9 @@
-package com.adouble.dagger2demo.net.image;
+package com.adouble.dagger2demo.net;
 
 import android.content.Context;
 import android.os.Environment;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.Registry;
 import com.bumptech.glide.annotation.GlideModule;
@@ -14,6 +15,7 @@ import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.AppGlideModule;
 
 import java.io.InputStream;
+
 
 /**
  * Created by double on 2017/8/1.
@@ -56,10 +58,11 @@ public class MyGlideModule extends AppGlideModule {
 
 
     /**
-     * 把glide默认的网络请求方式换成okhttp
+     * 把glide默认的网络请求方式换成 okhttp
      */
     @Override
-    public void registerComponents(Context context, Registry registry) {
+    public void registerComponents(Context context, Glide glide, Registry registry) {
+        super.registerComponents(context, glide, registry);
         registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory());
     }
 
@@ -68,7 +71,6 @@ public class MyGlideModule extends AppGlideModule {
      */
     @Override
     public boolean isManifestParsingEnabled() {
-
         return false;
     }
 }

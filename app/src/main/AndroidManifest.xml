@@ -49,12 +49,7 @@
         <activity android:name=".module.views.ViewsAct">
         </activity>
 
-        <meta-data
-            android:name="design_width"
-            android:value="1280" />
-        <meta-data
-            android:name="design_height"
-            android:value="800" />
+
     </application>
 
 </manifest>

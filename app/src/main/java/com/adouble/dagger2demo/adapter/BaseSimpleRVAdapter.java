@@ -1,4 +1,4 @@
-package com.adouble.dagger2demo;
+package com.adouble.dagger2demo.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -20,13 +20,6 @@ import com.adouble.dagger2demo.module.views.ViewsAct;
 import javax.inject.Inject;
 
 import hugo.weaving.DebugLog;
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 
 public class MainActivity extends BaseActivity {
@@ -35,7 +28,7 @@ public class MainActivity extends BaseActivity {
 
     @Inject
     MainContract.Presenter mPresenter;
-    @Inject //dagger2
+    @Inject
     Application mApplication;
 
 
@@ -51,7 +44,10 @@ public class MainActivity extends BaseActivity {
 
         mTV = (TextView) findViewById(R.id.tv_main);
 
-        mFragment = MainFrag.newInstance();
+        if (mFragment == null) {
+            mFragment = MainFrag.newInstance();
+        }
+
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.fl_container, mFragment, "fl_container")
@@ -85,54 +81,7 @@ public class MainActivity extends BaseActivity {
         ViewsAct.actionStart(this);
     }
 
-    boolean a = true;
 
-    public void temp(View view) {
-        Observable<String> stringObservable = Observable.create(new ObservableOnSubscribe<String>() {
-            @Override
-            public void subscribe(ObservableEmitter<String> e) throws Exception {
-                e.onNext("1");
-                e.onNext("2");
-
-
-//                e.onError(new Throwable("as"));
-
-                Thread.sleep(500);
-
-                e.onError(new Throwable("onerrassd"));
-//                int asd = Integer.parseInt("asd");
-
-
-                e.onNext("3");
-            }
-        });
-
-        stringObservable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .retry()
-//                .repeat()
-                .subscribe(new Observer<String>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(String s) {
-                        Log.d(TAG, "onNext: " + s);
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.d(TAG, "onError: " + e.getMessage());
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
-    }
 }
 
 
