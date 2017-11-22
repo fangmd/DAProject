@@ -47,6 +47,13 @@ Butterknife
 ## MultiDex
 
 
+# Takt
+
+https://github.com/wasabeef/Takt
+
+帧率检测，流畅度检测
+
+
 # TODO:
 
 ## canary
