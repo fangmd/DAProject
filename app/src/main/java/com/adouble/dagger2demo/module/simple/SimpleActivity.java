@@ -55,13 +55,6 @@ public class SimpleActivity extends BaseActivity {
     @Override
     protected void initInject() {
 
-//        DaggerTaskDetailComponent.builder()
-//                .taskDetailPresenterModule(new TaskDetailPresenterModule(taskDetailFragment, taskId))
-//                .tasksRepositoryComponent(((ToDoApplication) getApplication())
-//                        .getTasksRepositoryComponent()).build()
-//                .inject(this);
-
-
         mComponent = DaggerSimpleComponent.builder()
                 .applicationComponent(App.getInstance().component())
                 .simplePresenterModule(new SimplePresenterModule(mFragment))
