@@ -50,7 +50,6 @@ public class MainFrag extends BaseFragment implements MainContract.View {
 
     @Override
     public void showMessage() {
-
         mTitle.setText("A Message From MainPresenter");
     }
 

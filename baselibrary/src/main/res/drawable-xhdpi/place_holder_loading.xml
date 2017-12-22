@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/place_holder_loading_ic"
+            android:fromDegrees="0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="360">
+
+        </clip>
+
+    </item>
+
+</layer-list>

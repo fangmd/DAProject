@@ -7,7 +7,7 @@ import com.adouble.dagger2demo.dagger.PerActivity;
 import com.adouble.dagger2demo.entities.Article;
 import com.adouble.dagger2demo.entities.HttpResponse;
 import com.adouble.dagger2demo.net.NetWorks;
-import com.fang.common.base.utils.over.LoggerUtils;
+import com.nerc.baselibrary.utils.LoggerUtils;
 
 import javax.inject.Inject;
 

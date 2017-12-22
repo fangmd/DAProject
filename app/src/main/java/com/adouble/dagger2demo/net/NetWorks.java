@@ -8,7 +8,7 @@ import com.adouble.dagger2demo.AppConstants;
 import com.adouble.dagger2demo.entities.Article;
 import com.adouble.dagger2demo.entities.HttpResponse;
 import com.adouble.dagger2demo.net.api.BlogService;
-import com.fang.common.base.utils.MobileUtil;
+import com.nerc.baselibrary.utils.NetUtils;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -70,14 +70,14 @@ public class NetWorks {
      */
     private final Interceptor REWRITE_CACHE_CONTROL_INTERCEPTOR = chain -> {
         Request request = chain.request();
-        if(!MobileUtil.isNetworkConnected(App.getInstance())){
+        if(!NetUtils.isNetworkConnected(App.getInstance())){
             request = request.newBuilder()
                     .cacheControl(CacheControl.FORCE_CACHE)
                     .build();
             Log.d(TAG, "no network");
         }
         Response originalResponse = chain.proceed(request);
-        if(MobileUtil.isNetworkConnected(App.getInstance())){
+        if(NetUtils.isNetworkConnected(App.getInstance())){
             String cacheControl = request.cacheControl().toString();
             return originalResponse.newBuilder()
                     .header("Cache-Control", cacheControl)

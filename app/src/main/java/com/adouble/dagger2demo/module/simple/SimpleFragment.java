@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.base.BaseFragment;
 import com.adouble.dagger2demo.dagger.simple.SimpleComponent;
-import com.fang.common.base.utils.over.ToastUtil;
+import com.nerc.baselibrary.utils.ToastUtils;
 
 import javax.inject.Inject;
 
@@ -58,7 +58,7 @@ public class SimpleFragment extends BaseFragment implements SimpleContract.View 
 
     @Override
     public void showData(String net) {
-        ToastUtil.showCLToast(getContext(), net);
+        ToastUtils.showCLToast(getContext(), net);
 
     }
 

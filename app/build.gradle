@@ -54,7 +54,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
 
-    compile project(':common')
+    compile project(':baselibrary')
 
     // dagger2
     compile 'com.google.dagger:dagger:2.13'
@@ -70,8 +70,5 @@ dependencies {
 
     // glide
     annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
-
-
-
 
 }

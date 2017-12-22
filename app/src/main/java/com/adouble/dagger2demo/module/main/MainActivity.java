@@ -14,12 +14,9 @@ import com.adouble.dagger2demo.dagger.main.DaggerMainComponent;
 import com.adouble.dagger2demo.dagger.main.MainComponent;
 import com.adouble.dagger2demo.dagger.main.MainPresenterModule;
 import com.adouble.dagger2demo.module.simple.SimpleActivity;
-import com.adouble.dagger2demo.module.toastandrsp.ToastAct;
 import com.adouble.dagger2demo.module.views.ViewsAct;
 
 import javax.inject.Inject;
-
-import hugo.weaving.DebugLog;
 
 
 public class MainActivity extends BaseActivity {
@@ -56,7 +53,6 @@ public class MainActivity extends BaseActivity {
         initInject();
 
         Log.d(TAG, "onCreate: " + mApplication.toString());
-
     }
 
     @Override
@@ -71,11 +67,6 @@ public class MainActivity extends BaseActivity {
 
     public void toApplication(View view) {
         startActivity(new Intent(this, SimpleActivity.class));
-    }
-
-    @DebugLog
-    public void toToastAct(View view) {
-        ToastAct.actionStart(this);
     }
 
     public void toViewAct(View view) {

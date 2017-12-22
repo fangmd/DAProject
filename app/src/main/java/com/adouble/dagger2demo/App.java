@@ -6,8 +6,6 @@ import android.support.multidex.MultiDexApplication;
 import com.adouble.dagger2demo.dagger.base.AppModule;
 import com.adouble.dagger2demo.dagger.base.ApplicationComponent;
 import com.adouble.dagger2demo.dagger.base.DaggerApplicationComponent;
-import com.fang.common.base.utils.Utils;
-import com.squareup.leakcanary.LeakCanary;
 
 import javax.inject.Inject;
 
@@ -40,19 +38,17 @@ public class App extends MultiDexApplication {
         sApplication = this;
 
 
-        Utils.init(this);
-
         mApplicationComponent = DaggerApplicationComponent.builder()
                 .appModule(new AppModule(this))
                 .build();
 
-        // leakcanary
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
+//        // leakcanary
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            // This process is dedicated to LeakCanary for heap analysis.
+//            // You should not init your app in this process.
+//            return;
+//        }
+//        LeakCanary.install(this);
 
     }
 

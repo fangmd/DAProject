@@ -1,0 +1,90 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "API_DEBUG", String.valueOf(API_MODE.equals(API_MODE_TEST))
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "API_DEBUG", String.valueOf(API_MODE.equals(API_MODE_TEST))
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+
+def dbflow_version = "4.1.2"
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile 'com.android.support:cardview-v7:26.1.0'
+    
+
+    testCompile rootProject.ext.dependencies["junit"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    // umeng
+    compile 'com.umeng.analytics:analytics:6.1.2'
+    compile project(':opensourcelibrary')
+    compile project(':PushSDK')
+
+    //wei xin login
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    // glide
+    compile 'com.github.bumptech.glide:glide:4.1.1'
+    compile 'com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    compile 'jp.wasabeef:glide-transformations:3.0.1'
+
+    //router
+    compile 'com.alibaba:arouter-api:1.2.1.1'
+
+    //    provide ('com.alibaba:arouter-api:1.2.1.1') {
+    //        exclude group: 'com.android.support', module: 'support-v4'
+    //        exclude group: 'com.android.support', module: 'design'
+    //        exclude group: 'com.android.support', module: 'support-annotations'
+    //        exclude group: 'com.android.support', module: 'support-fragment'
+    //    }
+    //    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
+
+
+    //db
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-rx2:${dbflow_version}"
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+}

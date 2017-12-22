@@ -1,0 +1,78 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/tab_indicator_color</item>
+
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowBackground" >@color/white</item>
+
+        <!-- Status bar stuff. -->
+        <!--<item name="android:statusBarColor">@color/colorPrimaryDark</item>-->
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+
+        <!--<item name="android:windowBackground" >@color/white</item>-->
+
+        <!-- Status bar stuff. -->
+        <!--<item name="android:statusBarColor">@color/colorPrimaryDark</item>-->
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+
+
+    </style>
+
+    <!--白色背景的 Activity -->
+    <style name="WhiteTheme" parent="AppTheme">
+        <item name="android:windowBackground" >@color/white</item>
+    </style>
+
+    <style name="NoWindowsBg.AppTheme" parent="AppTheme">
+        <item name="android:windowBackground" >@null</item>
+    </style>
+
+    <style name="AppTheme.LightStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/tab_indicator_color</item>
+
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowBackground" >@color/white</item>
+
+        <!-- Status bar stuff. -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <!--<item name="android:windowTranslucentNavigation">true</item>-->
+
+    <style name="AppThemeForMyIntegral" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+
+
+</resources>

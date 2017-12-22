@@ -6,7 +6,7 @@ import android.os.Build;
 import android.os.PersistableBundle;
 import android.support.annotation.RequiresApi;
 
-import com.fang.common.base.utils.over.LoggerUtils;
+import com.nerc.baselibrary.utils.LoggerUtils;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="status_bar_height">0dp</dimen>
+
+    <dimen name="toolbar_height">50dp</dimen>
+
+    <integer name="anim_duration_very_long">1500</integer>
+    <integer name="anim_duration_long">500</integer>
+    <integer name="anim_duration_medium">300</integer>
+
+
+    <dimen name="text_big_number">34sp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_subtitle">13sp</dimen>
+    <dimen name="text_size_menu">16sp</dimen>
+    <dimen name="text_size_toolbar_title">16sp</dimen>
+    <dimen name="text_size_standard">14sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_percent_number">8sp</dimen>
+    <dimen name="text_percent">5sp</dimen>
+    <dimen name="line_space">6dp</dimen>
+
+
+
+    <!--new text-->
+    <dimen name="text_title_16">16sp</dimen>
+    <dimen name="text_title_13">13sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+
+    <!--text line space-->
+    <dimen name="text_line_space_small">3dp</dimen>
+    <dimen name="text_line_space_middle">6dp</dimen>
+
+
+</resources>

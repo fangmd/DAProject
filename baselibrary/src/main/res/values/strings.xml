@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+
+
+    <string name="no_more">没有更多了</string>
+
+
+    <!--dialog-->
+    <string name="dialog_positive">确定</string>
+    <string name="dialog_negative">取消</string>
+    <string name="prompt">提示</string>
+
+
+
+    <!--error relative-->
+    <string name="error_permission_denied">权限未开启，请在设置中开启相关权限</string>
+    <string name="error_open_file" formatted="false">本机没有能打开%s文件的应用,文件保存位置：%s</string>
+    <string name="error_et_cannot_be_empty">不能为空</string>
+    <string name="error_et_invalid">不能为空</string>
+    <string name="error_data_empty">没有数据</string>
+    <string name="error_load_data_fail">加载数据失败</string>
+    <!--error end -->
+
+    <!-- loading dialog -->
+    <string name="dialog_waiting">请稍后...</string>
+    <!--loading dialog end-->
+
+    shareCoursehare-->
+    <string name="share_content_empty">没有可分享的内容</string>
+    shareCoursehare end-->
+
+    <!--transition -->
+    <string name="transition_name_course_img">course_img</string>
+    <!--transition end-->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--download dialog-->
+    <string name="download_complete2">下载完成</string>
+    <string name="download_fail">下载失败</string>
+
+    <!--file select dialog-->
+    <string name="upload_file_selected_take_photo">拍照</string>
+    <string name="upload_file_selected_select_fail">选择文件</string>
+    <string name="upload_file_selected_select_photo">选择图片</string>
+
+
+    <string name="comming_soon">敬请期待</string>
+
+</resources>
