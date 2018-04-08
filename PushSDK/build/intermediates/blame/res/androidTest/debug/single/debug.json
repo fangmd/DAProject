@@ -2,5 +2,9 @@
     {
         "merged": "/Users/nerc/Documents/fangmingdong/tempproject/DAProject/PushSDK/build/intermediates/res/merged/androidTest/debug/layout_upush_notification.xml.flat",
         "source": "/Users/nerc/Documents/fangmingdong/tempproject/DAProject/PushSDK/build/intermediates/bundles/debug/res/layout/upush_notification.xml"
+    },
+    {
+        "merged": "/Users/double/AndroidStudioProjects/DAProject/PushSDK/build/intermediates/res/merged/androidTest/debug/layout_upush_notification.xml.flat",
+        "source": "/Users/double/AndroidStudioProjects/DAProject/PushSDK/build/intermediates/bundles/debug/res/layout/upush_notification.xml"
     }
 ]

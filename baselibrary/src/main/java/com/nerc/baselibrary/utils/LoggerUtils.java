@@ -1,6 +1,7 @@
 package com.nerc.baselibrary.utils;
 
 import com.nerc.baselibrary.BuildConfig;
+import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -9,13 +10,16 @@ import com.orhanobut.logger.Logger;
  */
 public class LoggerUtils {
 
-    //TODO: 设置release版本不打印log
-
-    //TODO:
-//    private static boolean DEBUG = com.waytone.vqchat.BuildConfig.LOG_DEBUG;
     private static boolean DEBUG = BuildConfig.LOG_DEBUG;
-//    public static boolean NET_DEBUG = com.waytone.vqchat.BuildConfig.NET_DEBUG;
 
+    public static void init() {
+        Logger.addLogAdapter(new AndroidLogAdapter() {
+            @Override
+            public boolean isLoggable(int priority, String tag) {
+                return BuildConfig.DEBUG;
+            }
+        });
+    }
 
     public static void v(String s) {
         if (DEBUG) {
@@ -55,7 +59,7 @@ public class LoggerUtils {
         }
     }
 
-    public static void e(String tag,Throwable t) {
+    public static void e(String tag, Throwable t) {
         if (DEBUG) {
             Logger.t(tag).e(t.getMessage());
         }
@@ -73,12 +77,14 @@ public class LoggerUtils {
         }
     }
 
+    public static void d(Object object) {
+        if (DEBUG) {
+            Logger.d(object);
+        }
+    }
 
     public static void d(String tag, String s) {
         if (DEBUG) {
-            if (s == null) {
-                s = "";
-            }
             Logger.t(tag).d(s);
         }
     }

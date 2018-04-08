@@ -116,6 +116,7 @@ public class App extends MultiDexApplication {
 //        if (BuildConfig.LOG_DEBUG) {
 //            com.facebook.stetho.Stetho.initializeWithDefaults(this);
 //        }
+        LoggerUtils.init();
     }
 
     private void initPush(String channel) {
@@ -192,7 +193,6 @@ public class App extends MultiDexApplication {
             activity.finish();
         }
     }
-
 
 
 }

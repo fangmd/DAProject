@@ -44,7 +44,7 @@ dependencies {
     //okhttp
     api 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     // logger
-    api 'com.orhanobut:logger:1.15'
+    api 'com.orhanobut:logger:2.2.0'
 
     api 'com.andkulikov:transitionseverywhere:1.7.0'
     api 'com.android.support:multidex:1.0.2'
