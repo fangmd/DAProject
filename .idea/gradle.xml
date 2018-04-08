@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/PushSDK" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/imagelib" />
             <option value="$PROJECT_DIR$/opensourcelibrary" />
           </set>
         </option>

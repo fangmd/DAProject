@@ -5,11 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/DAProject.iml" filepath="$PROJECT_DIR$/DAProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dagger2Demo.iml" filepath="$PROJECT_DIR$/Dagger2Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/opensourcelibrary/opensourcelibrary.iml" filepath="$PROJECT_DIR$/opensourcelibrary/opensourcelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagelib/imagelib.iml" filepath="$PROJECT_DIR$/imagelib/imagelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/opensourcelibrary/opensourcelibrary.iml" filepath="$PROJECT_DIR$/opensourcelibrary/opensourcelibrary.iml" />
     </modules>
   </component>
