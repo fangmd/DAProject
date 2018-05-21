@@ -9,9 +9,6 @@ import com.nerc.baselibrary.R;
 import com.nerc.baselibrary.utils.ToastUtils;
 import com.nerc.baselibrary.widgets.LoadingDialog;
 
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
-
 /**
  * Created by nercdev on 2017/1/12.
  * 所有 Fragment 的基类
@@ -57,23 +54,10 @@ public abstract class BaseFragment extends Fragment {
 //        ToastUtils.showToast(getActivity(), getString(R.string.str_error_msg_service_error));
     }
 
-
-    // deal RxJava leak memory
-    CompositeDisposable mCompositeDisposable = new CompositeDisposable();
-
-    public void unSubscribe() {
-        mCompositeDisposable.clear();
-    }
-
-
-    public void subscribe(Disposable disposable) {
-        mCompositeDisposable.add(disposable);
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unSubscribe();
+
     }
 
     // loading dialog
@@ -97,13 +81,8 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-
     public void showLoadFail() {
         ToastUtils.showToast(getActivity(), getString(R.string.error_load_data_fail));
-    }
-
-    public String[] getQuestionUserAnswer() {
-        return null;
     }
 
 }

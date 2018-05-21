@@ -1,29 +1,29 @@
 package com.nerc.baselibrary.base;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.nerc.baselibrary.App;
 import com.nerc.baselibrary.R;
+import com.nerc.baselibrary.manager.ActivityManager;
 import com.nerc.baselibrary.utils.ToastUtils;
 import com.nerc.baselibrary.widgets.LoadingDialog;
-
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 
 
 /**
  * Created by xinghongfei on 16/8/12.
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected final String TAG = getClass().getSimpleName();
+
     private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getLayoutId());
         setUpStatusBarColor();
 
         loadingDialog = new LoadingDialog(this);
@@ -35,8 +35,16 @@ public class BaseActivity extends AppCompatActivity {
 //        PushAgent.getInstance(this).onAppStart();
 
 
-        App.getInstance().mActivities.add(this);
+        ActivityManager.getInstance().add(this);
+
+        init();
     }
+
+    protected abstract @LayoutRes
+    int getLayoutId();
+
+    protected abstract void init();
+
 
     private void setUpStatusBarColor() {
 
@@ -44,7 +52,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-    public void removeWindowBackground(){
+    public void removeWindowBackground() {
         getWindow().setBackgroundDrawable(null);
     }
 
@@ -89,16 +97,14 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unSubscribe();
-        App.getInstance().mActivities.remove(this);
+        ActivityManager.getInstance().remove(this);
     }
-
 
     public void showNetError() {
 //        ToastUtils.showToast(this, getString(R.string.str_error_msg_network_status_error));
     }
 
-    public void showLoadDataError(){
+    public void showLoadDataError() {
         ToastUtils.showToast(this, getString(R.string.error_load_data_fail));
     }
 
@@ -109,21 +115,5 @@ public class BaseActivity extends AppCompatActivity {
     public void showLoadFail() {
         ToastUtils.showToast(this, getString(R.string.error_load_data_fail));
     }
-
-    // deal RxJava leak memory
-    CompositeDisposable mCompositeDisposable = new CompositeDisposable();
-
-    public void unSubscribe() {
-        mCompositeDisposable.clear();
-    }
-
-
-    public void register(Disposable disposable) {
-        mCompositeDisposable.add(disposable);
-    }
-
-
-
-
 
 }

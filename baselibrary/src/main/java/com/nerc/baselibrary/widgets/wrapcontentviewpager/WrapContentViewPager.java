@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * WrapContentViewPager
+ * WrapContentViewPager 高度可动态变化的 ViewPager
  * Created by nerc on 2017/10/16.
  */
 

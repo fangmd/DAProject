@@ -1,13 +1,9 @@
 package com.nerc.baselibrary;
 
-import android.app.Activity;
 import android.support.multidex.MultiDexApplication;
 
 import com.nerc.baselibrary.utils.LoggerUtils;
 import com.nerc.baselibrary.utils.SPUtils;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -24,7 +20,6 @@ public class App extends MultiDexApplication {
 
     public String mUserId;
 
-    public List<Activity> mActivities = new ArrayList<>();
 
     @Override
     public void onCreate() {
@@ -61,13 +56,6 @@ public class App extends MultiDexApplication {
 //            return;
 //        }
 //        LeakCanary.install(this);
-    }
-
-
-    public void exit() {
-        for (Activity activity : mActivities) {
-            activity.finish();
-        }
     }
 
 
