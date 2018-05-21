@@ -1,3 +1,3 @@
-include ':app', ':opensourcelibrary', ':PushSDK', ':baselibrary', ':imagelib'
+include ':app', ':opensourcelibrary', ':baselibrary', ':imagelib'
 
-//':common',
+//':common', ':PushSDK',
