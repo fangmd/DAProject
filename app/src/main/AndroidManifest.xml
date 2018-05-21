@@ -12,33 +12,13 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
-        android:name=".App"
+        android:name="com.nerc.baselibrary.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".module.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".module.simple.SimpleActivity">
-        </activity>
-        <activity android:name=".module.ScopeActivity">
-        </activity>
-        <activity android:name=".base.BaseActivity">
-        </activity>
-        <activity android:name=".module.toastandrsp.ToastAct">
-        </activity>
-
-        <service
-            android:name=".service.AppService"
-            android:enabled="true"
-            android:exported="true">
-        </service>
         <service
             android:name=".service.DownloadJobService"
             android:enabled="true"
@@ -46,8 +26,14 @@
             android:permission="android.permission.BIND_JOB_SERVICE">
         </service>
 
-        <activity android:name=".module.views.ViewsAct">
+        <activity android:name=".module.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

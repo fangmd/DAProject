@@ -27,18 +27,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    // progress
-//    compile 'me.jessyan:progressmanager:1.5.0'
-
     // glide
     implementation("com.github.bumptech.glide:glide:4.6.1") {
         exclude group: "com.android.support"
     }
-    compile 'com.github.bumptech.glide:okhttp3-integration:4.6.1'
+    api 'com.github.bumptech.glide:okhttp3-integration:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 
     // glide transformations
-    implementation 'jp.wasabeef:glide-transformations:3.1.1'
+    api 'jp.wasabeef:glide-transformations:3.1.1'
     // If you want to use the GPU Filters
-    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
 }

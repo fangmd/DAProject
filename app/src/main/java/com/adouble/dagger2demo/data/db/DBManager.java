@@ -1,6 +1,7 @@
 package com.adouble.dagger2demo.data.db;
 
-import com.adouble.dagger2demo.App;
+
+import com.nerc.baselibrary.App;
 
 /**
  * Created by double on 2017/1/7.

@@ -1,6 +1,5 @@
 package com.nerc.baselibrary.base;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +8,6 @@ import com.nerc.baselibrary.App;
 import com.nerc.baselibrary.R;
 import com.nerc.baselibrary.utils.ToastUtils;
 import com.nerc.baselibrary.widgets.LoadingDialog;
-import com.umeng.analytics.MobclickAgent;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
@@ -41,11 +39,6 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void setUpStatusBarColor() {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            //6.0 全透明状态栏, 在 style 中实现状态栏更改字体颜色，所以可以设置成 white
-//            SimpleStatusBarUtil.setStatusBarTrans(this);
-
-        }
 
 
     }
@@ -59,7 +52,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         resumeData();
-        MobclickAgent.onResume(this);
+//        MobclickAgent.onResume(this);
     }
 
     /**
@@ -72,7 +65,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
+//        MobclickAgent.onPause(this);
     }
 
     /**

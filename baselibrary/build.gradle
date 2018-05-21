@@ -13,8 +13,6 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        vectorDrawables.useSupportLibrary = true
-
     }
     buildTypes {
         release {
@@ -43,31 +41,32 @@ android {
 def dbflow_version = "4.1.2"
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile rootProject.ext.dependencies["support-v4"]
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["design"]
-    compile rootProject.ext.dependencies["recyclerview-v7"]
-    compile 'com.android.support:cardview-v7:26.1.0'
+    api rootProject.ext.dependencies["support-v4"]
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api 'com.android.support:cardview-v7:26.1.0'
     
 
-    testCompile rootProject.ext.dependencies["junit"]
+    testImplementation rootProject.ext.dependencies["junit"]
     implementation rootProject.ext.dependencies["constraint-layout"]
-    // umeng
-    compile 'com.umeng.analytics:analytics:6.1.2'
-    compile project(':opensourcelibrary')
-    compile project(':PushSDK')
-    compile project(':imagelib')
 
+    api project(':opensourcelibrary')
+//    compile project(':PushSDK')
+    api project(':imagelib')
+
+
+    // umeng
+//    compile 'com.umeng.analytics:analytics:6.1.2'
     //wei xin login
-    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+//    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
 
     //router
-    compile 'com.alibaba:arouter-api:1.2.1.1'
-
+//    compile 'com.alibaba:arouter-api:1.2.1.1'
     //    provide ('com.alibaba:arouter-api:1.2.1.1') {
     //        exclude group: 'com.android.support', module: 'support-v4'
     //        exclude group: 'com.android.support', module: 'design'
@@ -78,8 +77,8 @@ dependencies {
 
 
     //db
-    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
-    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
-    compile "com.github.Raizlabs.DBFlow:dbflow-rx2:${dbflow_version}"
+    api "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    api "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    api "com.github.Raizlabs.DBFlow:dbflow-rx2:${dbflow_version}"
     annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
 }
