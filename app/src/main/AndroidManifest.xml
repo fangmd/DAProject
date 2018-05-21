@@ -34,6 +34,8 @@
         </activity>
         <activity android:name=".module.main.MainActivity">
         </activity>
+        <activity android:name=".module.netdemo.NetDemoActivity">
+        </activity>
     </application>
 
 </manifest>

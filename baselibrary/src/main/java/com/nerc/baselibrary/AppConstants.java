@@ -1,7 +1,5 @@
 package com.nerc.baselibrary;
 
-import static com.nerc.baselibrary.BuildConfig.API_DEBUG;
-
 /**
  * Created by nerc on 2017/8/8.
  */
@@ -19,27 +17,6 @@ public class AppConstants {
         public static final String WEB_URL = "http://202.205.161.103:8040/";
         public static final String API_FILE_RUL_RELEASE = "http://202.205.161.103:8044/";
 
-
-        // 测试服务器地址
-        public static final String BASE_URL_DEBUG = "http://202.205.161.103:8025/";
-        public static final String API_FILE_RUL_DEBUG = "http://202.205.161.103:9188/";
-
-
-        public static String getApi() {
-            if (API_DEBUG) {
-                return BASE_URL_DEBUG;
-            } else {
-                return BASE_URL_RELEASE;
-            }
-        }
-
-        public static String getFileApi() {
-            if (API_DEBUG) {
-                return API_FILE_RUL_DEBUG;
-            } else {
-                return API_FILE_RUL_RELEASE;
-            }
-        }
     }
 
 
@@ -53,13 +30,13 @@ public class AppConstants {
         public static final String FILE = "file";
         public static final String UMENG = "umeng";
         public static final String DOWNLOAD = "Download";
+        public static final String NET = "net-work";
     }
-    
+
     public class FilePath {
 
         // DownloadManager.Request 使用
         public static final String RES_DOWNLOAD_PATH = "communityEduPro/file";
-
 
         public static final String CACHE_PATH = "/.CommunityEduPro";
 
@@ -71,7 +48,6 @@ public class AppConstants {
     }
 
     public class RequestCode {
-
         public static final int TAKE_PHOTO = 100;
         public static final int PICK_PHOTO = 200;
         public static final int PICK_FILE = 300;

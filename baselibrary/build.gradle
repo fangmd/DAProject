@@ -18,13 +18,11 @@ android {
         release {
             minifyEnabled false
             buildConfigField "boolean", "LOG_DEBUG", "false"
-            buildConfigField "boolean", "API_DEBUG", String.valueOf(API_MODE.equals(API_MODE_TEST))
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            buildConfigField "boolean", "API_DEBUG", String.valueOf(API_MODE.equals(API_MODE_TEST))
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
