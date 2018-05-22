@@ -36,6 +36,13 @@
         </activity>
         <activity android:name=".module.netdemo.NetDemoActivity">
         </activity>
+        <activity
+            android:name=".module.layout.LayoutActivity"
+            android:label="@string/title_activity_layout"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".module.layout.mine.YoudaoActivity">
+        </activity>
     </application>
 
 </manifest>

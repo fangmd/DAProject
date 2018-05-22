@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".module.main.MainActivity">
 
     <Button
@@ -13,6 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="First"/>
+
+    <Button
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="主流布局Demo"/>
+
 
     <Button
         android:id="@+id/btn_net_demo"

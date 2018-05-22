@@ -39,6 +39,10 @@ android {
 //    hugo {
 //        enabled true
 //    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 

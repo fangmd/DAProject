@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.adouble.dagger2demo.R;
+import com.adouble.dagger2demo.module.layout.LayoutActivity;
 import com.adouble.dagger2demo.module.netdemo.NetDemoActivity;
 import com.nerc.baselibrary.base.BaseActivity;
 
@@ -27,10 +28,13 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_first, R.id.btn_net_demo})
+    @OnClick({R.id.btn_first, R.id.btn_layout, R.id.btn_net_demo})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_first:
+                break;
+            case R.id.btn_layout:
+                LayoutActivity.start(this);
                 break;
             case R.id.btn_net_demo:
                 NetDemoActivity.start(this);
