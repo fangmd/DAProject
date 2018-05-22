@@ -38,6 +38,11 @@ public class RxUtils {
         }
     }
 
+    public static <T> LifecycleTransformer<T> bindToLifecycle(LifecycleProvider view) {
+        return ((LifecycleProvider) view).bindToLifecycle();
+    }
+
+
     public static <T> ObservableTransformer<T, T> applySchedulers(final BaseView view) {
         return new ObservableTransformer<T, T>() {
             @Override
