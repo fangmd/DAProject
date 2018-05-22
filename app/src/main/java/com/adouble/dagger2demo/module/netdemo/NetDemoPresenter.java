@@ -4,6 +4,8 @@ import com.nerc.baselibrary.network.ErrorHandlerDO;
 import com.nerc.baselibrary.network.RxService;
 import com.nerc.baselibrary.utils.RxUtils;
 
+import java.io.IOException;
+
 import okhttp3.ResponseBody;
 
 /**
@@ -29,13 +31,18 @@ public class NetDemoPresenter implements NetDemoContract.Presenter {
                     protected void onNetFail(int code, String msg) {
                         // 网络请求失败，
                         // 网络原因 / 服务器错误
-
                         mView.hideLoadingDialog();
                     }
 
                     @Override
                     protected void onNetSuccess(ResponseBody data) {
                         // 网络请求成功
+                        try {
+                            mView.showData(data.string());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
                         mView.hideLoadingDialog();
                     }
                 });

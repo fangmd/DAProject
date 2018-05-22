@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import com.adouble.dagger2demo.R;
 import com.nerc.baselibrary.base.BaseActivity;
+import com.nerc.baselibrary.utils.ToastUtils;
 
 /**
  * Author: Created by fangmingdong on -下午3:49
@@ -39,8 +40,10 @@ public class NetDemoActivity extends BaseActivity<NetDemoContract.Presenter> imp
         mPresenter.getData();
     }
 
+
     @Override
-    public void showData() {
-        // show data
+    public void showData(String data) {
+        ToastUtils.showCToast(this, data);
     }
 }
+
