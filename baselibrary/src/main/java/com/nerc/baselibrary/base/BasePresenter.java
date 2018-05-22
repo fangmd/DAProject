@@ -16,16 +16,6 @@
 
 package com.nerc.baselibrary.base;
 
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.observers.DisposableObserver;
-
 public interface BasePresenter {
-
-
-    CompositeDisposable mCompositeDisposable = new CompositeDisposable();
-
-    void subscribe(DisposableObserver disposable);
-
-    void unsubscribe();
 
 }

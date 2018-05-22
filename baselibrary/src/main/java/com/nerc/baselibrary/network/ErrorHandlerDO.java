@@ -40,6 +40,8 @@ public abstract class ErrorHandlerDO<T> extends DisposableObserver<T> {
             } else {
                 onNetFail(((HttpResponse) t).code, ((HttpResponse) t).message);
             }
+        }else {
+            onNetSuccess(t);
         }
     }
 

@@ -14,4 +14,10 @@
         android:layout_height="wrap_content"
         android:text="First"/>
 
+    <Button
+        android:id="@+id/btn_net_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络请求Demo"/>
+
 </LinearLayout>

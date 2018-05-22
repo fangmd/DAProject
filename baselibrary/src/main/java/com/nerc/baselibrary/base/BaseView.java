@@ -18,8 +18,6 @@ package com.nerc.baselibrary.base;
 
 public interface BaseView<T> {
 
-    void setPresenter(T presenter);
-
     void showServerError();
 
     void showNetError();

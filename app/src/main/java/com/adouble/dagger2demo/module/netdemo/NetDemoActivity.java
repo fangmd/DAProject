@@ -1,11 +1,27 @@
 package com.adouble.dagger2demo.module.netdemo;
 
+import android.content.Context;
+import android.content.Intent;
+
 import com.adouble.dagger2demo.R;
 import com.nerc.baselibrary.base.BaseActivity;
 
-public class NetDemoActivity extends BaseActivity implements NetDemoContract.View {
+/**
+ * Author: Created by fangmingdong on -下午3:49
+ * Description:
+ */
+public class NetDemoActivity extends BaseActivity<NetDemoContract.Presenter> implements NetDemoContract.View {
 
-    private NetDemoContract.Presenter mPresenter;
+
+    public static void start(Context context) {
+        Intent starter = new Intent(context, NetDemoActivity.class);
+        context.startActivity(starter);
+    }
+
+    @Override
+    protected NetDemoContract.Presenter getPresenter() {
+        return new NetDemoPresenter(this);
+    }
 
     @Override
     protected int getLayoutId() {
@@ -20,11 +36,11 @@ public class NetDemoActivity extends BaseActivity implements NetDemoContract.Vie
     @Override
     protected void resumeData() {
         super.resumeData();
-
+        mPresenter.getData();
     }
 
     @Override
-    public void setPresenter(NetDemoContract.Presenter presenter) {
-        mPresenter = presenter;
+    public void showData() {
+        // show data
     }
 }

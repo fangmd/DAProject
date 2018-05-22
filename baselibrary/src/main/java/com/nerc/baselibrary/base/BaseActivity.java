@@ -3,20 +3,25 @@ package com.nerc.baselibrary.base;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.nerc.baselibrary.R;
 import com.nerc.baselibrary.manager.ActivityManager;
 import com.nerc.baselibrary.utils.ToastUtils;
 import com.nerc.baselibrary.widgets.LoadingDialog;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+
+import butterknife.ButterKnife;
 
 
 /**
- * Created by xinghongfei on 16/8/12.
+ * Author: Created by fangmingdong on -下午3:48
+ * Description:
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity<T> extends RxAppCompatActivity {
 
     protected final String TAG = getClass().getSimpleName();
+
+    protected T mPresenter;
 
     private LoadingDialog loadingDialog;
 
@@ -24,6 +29,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        ButterKnife.bind(this);
+        mPresenter = getPresenter();
         setUpStatusBarColor();
 
         loadingDialog = new LoadingDialog(this);
@@ -38,6 +45,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         ActivityManager.getInstance().add(this);
 
         init();
+    }
+
+    protected T getPresenter() {
+        return null;
     }
 
     protected abstract @LayoutRes

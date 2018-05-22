@@ -1,9 +1,7 @@
 package com.adouble.dagger2demo.module.netdemo;
 
-import com.adouble.dagger2demo.entities.Article;
-import com.adouble.dagger2demo.entities.HttpResponse;
-
 import io.reactivex.Observable;
+import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 
 /**
@@ -12,6 +10,8 @@ import retrofit2.http.GET;
  */
 public interface NetDemoApi {
 
-    @GET("/12/12")
-    Observable<HttpResponse<Article>> getBlogs();
+
+    @GET("http://ip.taobao.com/service/getIpInfo.php?ip=117.89.35.58")
+    Observable<ResponseBody> getBlog();
+
 }

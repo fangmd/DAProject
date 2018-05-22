@@ -2,18 +2,18 @@ package com.nerc.baselibrary.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.nerc.baselibrary.R;
 import com.nerc.baselibrary.utils.ToastUtils;
 import com.nerc.baselibrary.widgets.LoadingDialog;
+import com.trello.rxlifecycle2.components.support.RxFragment;
 
 /**
- * Created by nercdev on 2017/1/12.
- * 所有 Fragment 的基类
+ * Author: Created by fangmingdong on -下午3:48
+ * Description: Fragment 的基类
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends RxFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

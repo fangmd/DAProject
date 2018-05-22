@@ -11,6 +11,7 @@ public class NetDemoContract {
 
     interface View extends BaseView<Presenter> {
 
+        void showData();
 
     }
 
