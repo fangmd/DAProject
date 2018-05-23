@@ -61,6 +61,7 @@ dependencies {
     api project(':opensourcelibrary')
 //    compile project(':PushSDK')
     api project(':imagelib')
+    api project(':xwebview')
 
 
     // umeng

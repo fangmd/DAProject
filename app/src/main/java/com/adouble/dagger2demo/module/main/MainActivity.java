@@ -7,6 +7,7 @@ import android.view.View;
 import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.module.layout.LayoutActivity;
 import com.adouble.dagger2demo.module.netdemo.NetDemoActivity;
+import com.adouble.dagger2demo.module.webview.WebActivity;
 import com.nerc.baselibrary.base.BaseActivity;
 
 import butterknife.OnClick;
@@ -28,7 +29,8 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_first, R.id.btn_layout, R.id.btn_net_demo})
+    @OnClick({R.id.btn_first, R.id.btn_layout, R.id.btn_net_demo,
+            R.id.btn_webview})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_first:
@@ -38,6 +40,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_net_demo:
                 NetDemoActivity.start(this);
+                break;
+            case R.id.btn_webview:
+                WebActivity.start(this);
                 break;
         }
     }

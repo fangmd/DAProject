@@ -1,4 +1,4 @@
-def supportVersion = "27.1.0"
+def supportVersion = "27.1.1"
 def dbflow_version = "4.1.2"
 
 //def rxBindingVersion = "0.4.0"

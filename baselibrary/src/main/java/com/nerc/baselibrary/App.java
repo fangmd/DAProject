@@ -4,6 +4,7 @@ import android.support.multidex.MultiDexApplication;
 
 import com.nerc.baselibrary.utils.LoggerUtils;
 import com.nerc.baselibrary.utils.SPUtils;
+import com.njfae.xwebview.XWebViewUtils;
 
 
 /**
@@ -26,6 +27,7 @@ public class App extends MultiDexApplication {
         super.onCreate();
         sApp = this;
 
+        XWebViewUtils.init(this);
         // log
         initDebug();
 

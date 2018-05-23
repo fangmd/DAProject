@@ -11,10 +11,10 @@
         <item name="toolbarStyle">@style/ClubToolbar</item>
 
 
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowContentTransitions">true</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowContentTransitions">true</item>-->
 
-        <item name="android:windowBackground" >@color/white</item>
+        <!--<item name="android:windowBackground">@color/white</item>-->
 
         <!-- Status bar stuff. -->
         <!--<item name="android:statusBarColor">@color/colorPrimaryDark</item>-->

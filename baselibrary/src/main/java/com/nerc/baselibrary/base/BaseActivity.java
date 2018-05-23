@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import com.nerc.baselibrary.R;
 import com.nerc.baselibrary.manager.ActivityManager;
 import com.nerc.baselibrary.utils.ToastUtils;
+import com.nerc.baselibrary.utils.qmui.QMUIStatusBarHelper;
 import com.nerc.baselibrary.widgets.LoadingDialog;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
@@ -58,8 +59,7 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
 
 
     private void setUpStatusBarColor() {
-
-
+        QMUIStatusBarHelper.setStatusBarLightMode(this);
     }
 
 
