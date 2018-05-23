@@ -1,7 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.tencent.tinker.patch'
-
-apply from: "tinker.gradle"
 
 android {
     compileSdkVersion 27
