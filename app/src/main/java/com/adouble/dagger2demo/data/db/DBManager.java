@@ -1,16 +1,15 @@
 package com.adouble.dagger2demo.data.db;
 
 
-import com.nerc.baselibrary.App;
+import android.app.Application;
 
 /**
  * Created by double on 2017/1/7.
  */
-
 public class DBManager {
-    private final App mApplication;
+    private final Application mApplication;
 
-    public DBManager(App application) {
+    public DBManager(Application application) {
         mApplication = application;
     }
 }

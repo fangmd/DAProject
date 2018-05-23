@@ -1,7 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.tencent.tinker.patch'
+
+apply from: "tinker.gradle"
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.adouble.dagger2demo"
         minSdkVersion 16
@@ -12,7 +15,16 @@ android {
 
         multiDexEnabled true
 
+        ndk{
+            abiFilters 'armeabi'
+        }
     }
+
+    //recommend
+    dexOptions {
+        jumboMode = true
+    }
+
     buildTypes {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
@@ -52,8 +64,8 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support:support-v4:26.1.0'
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     testImplementation 'junit:junit:4.12'
 
     api project(':baselibrary')
@@ -63,6 +75,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // glide
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
 
 }

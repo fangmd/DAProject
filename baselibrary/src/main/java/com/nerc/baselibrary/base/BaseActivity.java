@@ -37,7 +37,7 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
         loadingDialog = new LoadingDialog(this);
 
         // activity manager
-//        App.getInstance().mActivities.add(this);
+//        TinkerAppLike.getInstance().mActivities.add(this);
 
         // push
 //        PushAgent.getInstance(this).onAppStart();

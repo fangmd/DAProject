@@ -62,6 +62,7 @@ dependencies {
 //    compile project(':PushSDK')
     api project(':imagelib')
     api project(':xwebview')
+    api project(':tinker')
 
 
     // umeng
@@ -85,4 +86,9 @@ dependencies {
     api "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
     api "com.github.Raizlabs.DBFlow:dbflow-rx2:${dbflow_version}"
     annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+
+    // tinker
+    compileOnly 'com.tencent.tinker:tinker-android-anno:1.9.1'
+    annotationProcessor 'com.tencent.tinker:tinker-android-anno:1.9.1'
+
 }

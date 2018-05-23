@@ -4,7 +4,7 @@
 //import android.content.Context;
 //import android.content.Intent;
 //
-//import com.nerc.baselibrary.App;
+//import com.nerc.baselibrary.TinkerAppLike;
 //import com.nerc.baselibrary.AppConstants;
 //import com.nerc.baselibrary.utils.LoggerUtils;
 //import com.nerc.baselibrary.utils.NetUtils;
@@ -23,10 +23,10 @@
 //
 //        if (NetUtils.getAPNType(context) == 1) {
 //            // wifi
-//            if (App.getInstance().mAutoStart) {
+//            if (TinkerAppLike.getInstance().mAutoStart) {
 //                RxDownload.INSTANCE.startAll();
 //                LoggerUtils.d(AppConstants.Tag.DOWNLOAD, "Wifi connect , start download");
-//                App.getInstance().mAutoStart = false;
+//                TinkerAppLike.getInstance().mAutoStart = false;
 //            } else {
 ////                LoggerUtils.d(AppConstants.Tag.DOWNLOAD, "Wifi connect , auto Start is false");
 //            }
@@ -34,7 +34,7 @@
 //
 //        if (NetUtils.getAPNType(context) != 1) {
 //            // stop all download, not wifi
-//            App.getInstance().mAutoStart = true;
+//            TinkerAppLike.getInstance().mAutoStart = true;
 //            RxDownload.INSTANCE.stopAll();
 //            LoggerUtils.d(AppConstants.Tag.DOWNLOAD, "Wifi lost , stop download, set auto start = true");
 //        }
