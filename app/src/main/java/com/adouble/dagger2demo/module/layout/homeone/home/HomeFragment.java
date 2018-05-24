@@ -4,7 +4,7 @@ package com.adouble.dagger2demo.module.layout.homeone.home;
 import android.os.Bundle;
 
 import com.adouble.dagger2demo.R;
-import com.nerc.baselibrary.base.BaseFragment;
+import com.njfea.baselibrary.base.BaseFragment;
 
 /**
  * Author: Created by fangmingdong on -上午10:20

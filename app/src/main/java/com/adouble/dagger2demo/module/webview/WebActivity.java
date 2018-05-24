@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.adouble.dagger2demo.R;
-import com.nerc.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.base.BaseActivity;
 import com.njfae.xwebview.ErrorView;
 import com.njfae.xwebview.MyWebView;
 import com.njfae.xwebview.MyWebViewListener;

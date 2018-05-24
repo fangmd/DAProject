@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.monkey.SimpleTextAdapter;
-import com.nerc.baselibrary.base.BaseActivity;
-import com.nerc.baselibrary.utils.LoggerUtils;
+import com.njfea.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.utils.LoggerUtils;
 
 import butterknife.BindView;
 

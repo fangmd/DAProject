@@ -10,9 +10,9 @@ import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.module.layout.homeone.home.HomeFragment;
 import com.adouble.dagger2demo.module.layout.homeone.invest.InvestFragment;
 import com.adouble.dagger2demo.module.layout.homeone.my.MyFragment;
-import com.nerc.baselibrary.adapter.SimpleFragmentPagerAdapter;
-import com.nerc.baselibrary.base.BaseActivity;
-import com.nerc.baselibrary.widgets.NoScrollViewPager;
+import com.njfea.baselibrary.adapter.SimpleFragmentPagerAdapter;
+import com.njfea.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.widgets.NoScrollViewPager;
 
 import java.util.ArrayList;
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.adouble.dagger2demo.R;
-import com.nerc.baselibrary.base.LazyBaseFragment;
+import com.njfea.baselibrary.base.LazyBaseFragment;
 
 import butterknife.BindView;
 

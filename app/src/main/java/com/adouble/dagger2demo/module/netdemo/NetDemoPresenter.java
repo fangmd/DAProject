@@ -1,8 +1,8 @@
 package com.adouble.dagger2demo.module.netdemo;
 
-import com.nerc.baselibrary.network.ErrorHandlerDO;
-import com.nerc.baselibrary.network.RxService;
-import com.nerc.baselibrary.utils.RxUtils;
+import com.njfea.baselibrary.network.ErrorHandlerDO;
+import com.njfea.baselibrary.network.RxService;
+import com.njfea.baselibrary.utils.RxUtils;
 
 import java.io.IOException;
 

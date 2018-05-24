@@ -3,7 +3,7 @@ package com.adouble.dagger2demo.net;
 import com.adouble.dagger2demo.entities.Article;
 import com.adouble.dagger2demo.entities.HttpResponse;
 import com.adouble.dagger2demo.net.api.BlogService;
-import com.nerc.baselibrary.network.RxService;
+import com.njfea.baselibrary.network.RxService;
 
 import io.reactivex.Observable;
 

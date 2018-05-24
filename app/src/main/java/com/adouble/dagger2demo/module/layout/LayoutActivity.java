@@ -7,7 +7,7 @@ import android.view.View;
 import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.module.layout.homeone.HomeOneActivity;
 import com.adouble.dagger2demo.module.layout.mine.YoudaoActivity;
-import com.nerc.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.base.BaseActivity;
 
 import butterknife.OnClick;
 

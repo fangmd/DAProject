@@ -1,6 +1,6 @@
 package com.adouble.dagger2demo.module.layout.homeone.invest;
 
-import com.nerc.baselibrary.utils.RxUtils;
+import com.njfea.baselibrary.utils.RxUtils;
 
 import java.util.concurrent.TimeUnit;
 

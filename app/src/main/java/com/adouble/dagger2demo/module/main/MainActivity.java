@@ -8,7 +8,7 @@ import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.module.layout.LayoutActivity;
 import com.adouble.dagger2demo.module.netdemo.NetDemoActivity;
 import com.adouble.dagger2demo.module.webview.WebActivity;
-import com.nerc.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.base.BaseActivity;
 
 import butterknife.OnClick;
 

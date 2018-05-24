@@ -2,8 +2,8 @@ package com.adouble.dagger2demo.module.splash;
 
 import com.adouble.dagger2demo.R;
 import com.adouble.dagger2demo.module.main.MainActivity;
-import com.nerc.baselibrary.base.BaseActivity;
-import com.nerc.baselibrary.utils.RxUtils;
+import com.njfea.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.utils.RxUtils;
 
 import java.util.concurrent.TimeUnit;
 

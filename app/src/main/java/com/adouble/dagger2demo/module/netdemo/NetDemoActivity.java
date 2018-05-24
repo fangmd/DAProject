@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.adouble.dagger2demo.R;
-import com.nerc.baselibrary.base.BaseActivity;
-import com.nerc.baselibrary.utils.ToastUtils;
+import com.njfea.baselibrary.base.BaseActivity;
+import com.njfea.baselibrary.utils.ToastUtils;
 
 /**
  * Author: Created by fangmingdong on -下午3:49

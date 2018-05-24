@@ -1,7 +1,7 @@
 package com.adouble.dagger2demo.module.netdemo;
 
-import com.nerc.baselibrary.base.BasePresenter;
-import com.nerc.baselibrary.base.BaseView;
+import com.njfea.baselibrary.base.BasePresenter;
+import com.njfea.baselibrary.base.BaseView;
 
 /**
  * Author: Created by fangmingdong on 2018/5/21-下午3:16
