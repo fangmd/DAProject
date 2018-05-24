@@ -12,10 +12,6 @@ import android.view.ViewGroup;
 public abstract class LazyBaseFragment<T> extends BaseFragment {
 
     /**
-     * Fragment 可见
-     */
-    private boolean isFragmentVisible;
-    /**
      * 是否是第一次加载
      */
     private boolean isFirst = true;
