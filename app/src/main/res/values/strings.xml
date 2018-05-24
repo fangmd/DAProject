@@ -6,4 +6,7 @@
     <string name="center_short_custom_toast">中间定制Toast</string>
     <string name="center_short_custom_toast_with_animation">中间定制Toast加动画</string>
     <string name="title_activity_layout">LayoutActivity</string>
+    <string name="home_title">首页</string>
+    <string name="invest_title">投资</string>
+    <string name="my_title">我的</string>
 </resources>

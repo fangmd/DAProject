@@ -16,7 +16,7 @@
 
 package com.nerc.baselibrary.base;
 
-public interface BaseView<T> {
+public interface BaseView {
 
     void showServerError();
 

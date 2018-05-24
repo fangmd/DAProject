@@ -3,6 +3,7 @@
 # TODO
 
 1. proguard file
+2. X5WebView 初始化失败
 
 
 

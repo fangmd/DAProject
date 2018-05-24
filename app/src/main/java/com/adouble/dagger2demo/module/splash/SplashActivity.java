@@ -23,7 +23,7 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        Disposable subscribe = Observable.timer(2, TimeUnit.SECONDS)
+        Disposable subscribe = Observable.timer(1, TimeUnit.SECONDS)
                 .compose(RxUtils.bindToLifecycle(this))
                 .subscribe(new Consumer<Long>() {
                     @Override

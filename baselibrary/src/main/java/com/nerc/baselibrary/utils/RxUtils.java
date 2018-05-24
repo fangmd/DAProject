@@ -39,7 +39,7 @@ public class RxUtils {
     }
 
     public static <T> LifecycleTransformer<T> bindToLifecycle(LifecycleProvider view) {
-        return ((LifecycleProvider) view).bindToLifecycle();
+        return view.bindToLifecycle();
     }
 
 

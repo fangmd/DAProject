@@ -47,6 +47,8 @@
         </activity>
         <activity android:name=".module.webview.WebActivity">
         </activity>
+        <activity android:name=".module.layout.homeone.HomeOneActivity">
+        </activity>
     </application>
 
 </manifest>

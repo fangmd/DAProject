@@ -9,7 +9,7 @@ import com.nerc.baselibrary.base.BaseView;
  */
 public class NetDemoContract {
 
-    interface View extends BaseView<Presenter> {
+    interface View extends BaseView{
 
         void showData(String data);
 
