@@ -4,7 +4,6 @@
 
 1. proguard file
 2. X5WebView 初始化失败
-3. 返回关闭 Loading
 4. 线程池工具类 + RxJava 封装
 
 

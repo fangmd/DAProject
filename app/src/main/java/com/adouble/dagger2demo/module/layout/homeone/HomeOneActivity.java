@@ -49,6 +49,8 @@ public class HomeOneActivity extends BaseActivity {
     protected void init() {
         initViewPager();
         initTabView();
+
+        showLoadingDialog();
     }
 
     private void initViewPager() {
