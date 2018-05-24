@@ -8,7 +8,7 @@ import com.njfea.baselibrary.R;
 import com.njfea.baselibrary.manager.ActivityManager;
 import com.njfea.baselibrary.utils.ToastUtils;
 import com.njfea.baselibrary.utils.qmui.QMUIStatusBarHelper;
-import com.njfea.baselibrary.widgets.LoadingDialog;
+import com.njfea.baselibrary.widgets.loading.LoadingDialogFragment;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -23,8 +23,8 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
     protected final String TAG = getClass().getSimpleName();
 
     protected T mPresenter;
+    private LoadingDialogFragment mLoadingDialogFragment;
 
-    private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
         mPresenter = getPresenter();
         setUpStatusBarColor();
 
-        loadingDialog = new LoadingDialog(this);
+        mLoadingDialogFragment = LoadingDialogFragment.newInstance();
 
         // activity manager
 //        TinkerAppLike.getInstance().mActivities.add(this);
@@ -91,8 +91,8 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
      * 显示加载对话框
      */
     public void showLoadingDialog() {
-        if (loadingDialog != null && !loadingDialog.isShowing()) {
-            loadingDialog.show();
+        if (mLoadingDialogFragment != null && !mLoadingDialogFragment.isVisible()) {
+            mLoadingDialogFragment.show(getSupportFragmentManager(), "--");
         }
     }
 
@@ -100,8 +100,8 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
      * 隐藏加载对话框
      */
     public void hideLoadingDialog() {
-        if (loadingDialog != null && loadingDialog.isShowing()) {
-            loadingDialog.dismiss();
+        if (mLoadingDialogFragment != null && mLoadingDialogFragment.isVisible()) {
+            mLoadingDialogFragment.dismiss();
         }
     }
 

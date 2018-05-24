@@ -1,4 +1,4 @@
-package com.njfea.baselibrary.widgets;
+package com.njfea.baselibrary.widgets.loading;
 
 import android.app.ProgressDialog;
 import android.content.Context;

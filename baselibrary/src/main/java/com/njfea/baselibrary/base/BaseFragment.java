@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.njfea.baselibrary.R;
 import com.njfea.baselibrary.utils.ToastUtils;
-import com.njfea.baselibrary.widgets.LoadingDialog;
+import com.njfea.baselibrary.widgets.loading.LoadingDialogFragment;
 import com.trello.rxlifecycle2.components.support.RxFragment;
 
 import butterknife.ButterKnife;
@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
 public abstract class BaseFragment<T extends BasePresenter> extends RxFragment {
 
     protected T mPresenter;
+    private LoadingDialogFragment mLoadingDialogFragment;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mPresenter = getPresenter();
-        mLoadingDialog = new LoadingDialog(getActivity());
+        mLoadingDialogFragment = LoadingDialogFragment.newInstance();
         initView();
         initData();
     }
@@ -76,15 +77,13 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment {
 
     }
 
-    // loading dialog
-    private LoadingDialog mLoadingDialog;
 
     /**
      * 显示加载对话框
      */
     public void showLoadingDialog() {
-        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
-            mLoadingDialog.show();
+        if (mLoadingDialogFragment != null && !mLoadingDialogFragment.isVisible()) {
+            mLoadingDialogFragment.show(getChildFragmentManager(), "ss");
         }
     }
 
@@ -92,8 +91,8 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment {
      * 隐藏加载对话框
      */
     public void hideLoadingDialog() {
-        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
-            mLoadingDialog.dismiss();
+        if (mLoadingDialogFragment != null && mLoadingDialogFragment.isVisible()) {
+            mLoadingDialogFragment.dismiss();
         }
     }
 
