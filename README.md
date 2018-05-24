@@ -6,6 +6,8 @@
 2. X5WebView 初始化失败
 4. 线程池工具类 + RxJava 封装
 
+沉浸式状态栏
+bottom menu: dialog fragment
 
 # 技术选型
 

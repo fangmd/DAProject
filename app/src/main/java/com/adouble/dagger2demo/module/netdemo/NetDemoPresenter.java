@@ -31,6 +31,7 @@ public class NetDemoPresenter implements NetDemoContract.Presenter {
                     protected void onNetFail(int code, String msg) {
                         // 网络请求失败，
                         // 网络原因 / 服务器错误
+                        mView.showLoadFail();
                         mView.hideLoadingDialog();
                     }
 
