@@ -70,14 +70,6 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment {
 
     }
 
-    public void showNetError() {
-//        ToastUtils.showToast(getActivity(), getString(R.string.str_error_msg_network_status_error));
-    }
-
-    public void showServerError() {
-//        ToastUtils.showToast(getActivity(), getString(R.string.str_error_msg_service_error));
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();

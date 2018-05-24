@@ -18,10 +18,6 @@ package com.nerc.baselibrary.base;
 
 public interface BaseView {
 
-    void showServerError();
-
-    void showNetError();
-
     void showLoadingDialog();
 
     void hideLoadingDialog();

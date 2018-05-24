@@ -111,17 +111,6 @@ public abstract class BaseActivity<T> extends RxAppCompatActivity {
         ActivityManager.getInstance().remove(this);
     }
 
-    public void showNetError() {
-//        ToastUtils.showToast(this, getString(R.string.str_error_msg_network_status_error));
-    }
-
-    public void showLoadDataError() {
-        ToastUtils.showToast(this, getString(R.string.error_load_data_fail));
-    }
-
-    public void showServerError() {
-//        ToastUtils.showToast(this, getString(R.string.str_error_msg_service_error));
-    }
 
     public void showLoadFail() {
         ToastUtils.showToast(this, getString(R.string.error_load_data_fail));
